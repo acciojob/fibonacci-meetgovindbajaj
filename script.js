@@ -1,15 +1,15 @@
 function fibonacci(num) {
 // your code here
-	return fib1(num);
+	return fib1(num-1);
 }
 function fib1(n) {
-        if (n <= 0)
+        if (Number(n) <= 0)
             return 0;
-        return recursive(n - 1, 0, 1);
+        return recursive(Number(n - 1), Number(0), Number(1));
     }
 function recursive(n, prev, curr) {
         if (n === 0)
             return curr;
-        return recursive(n - 1, curr, curr + prev);
+        return recursive(Number(n - 1), Number(curr), Number(curr) + Number(prev));
     }
 module.exports = fibonacci;
